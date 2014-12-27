@@ -22,7 +22,9 @@
 		// Remove "loading" class once the page has fully loaded.
 			window.onload = function() {
 				document.body.className = '';
-				document.getElementById('omer_email').href = 'mailto:omer@omer.london';
+				var em_href = 'mail' + 'to:'
+					+ ['omer', ['omer', 'london'].join('.')].join('@');
+				document.getElementById('omer_email').href = em_href;
 			}
 
 		// Prevent scrolling on touch.
