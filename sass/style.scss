@@ -56,6 +56,25 @@
 		}
 	}
 
+	.icon.fa-google-plus:hover:before {
+		background-color: #dd4b39 !important;
+	}
+
+	.icon.fa-linkedin:hover:before {
+		background-color: #007bb6 !important;
+	}
+
+	.icon.fa-github:hover:before {
+		background-color: #333 !important;
+	}
+
+	.icon.fa-envelope-o:hover:before {
+		background-color: rgb(19, 87, 255) !important;
+	}
+
+	.icon.fa-newspaper-o:hover:before {
+		background-color: rgb(255, 136, 102) !important;
+	}
 /* Wrapper */
 
 	@include vendor-keyframes('wrapper') {
@@ -76,7 +95,6 @@
 /* BG */
 
 	#bg {
-		@include vendor-property('animation', 'bg #{$duration-bg} linear infinite');
 		@include vendor-property('backface-visibility', 'hidden');
 		@include vendor-property('transform', 'translate3d(0,0,0)');
 
@@ -92,28 +110,6 @@
 	}
 
 	@include bg($bg-width * 1.5);
-
-/* Overlay */
-
-	@include vendor-keyframes('overlay') {
-		0%		{ opacity: 0; }
-		100%	{ opacity: 1; }
-	}
-
-	#overlay {
-		@include vendor-property('animation', 'overlay #{$duration-overlay} #{$delay-overlay} forwards');
-		background-attachment: fixed, fixed;
-		background-image: url('images/overlay-pattern.png'), url('images/overlay.svg');
-		background-position: top left, center center;
-		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
-		height: 100%;
-		left: 0;
-		opacity: 0;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}	
 
 /* Main */
 
