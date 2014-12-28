@@ -1,5 +1,8 @@
+var defaultTasks = ['sass', 'inline', 'htmlmin'];
+
 module.exports = function(grunt) {
   grunt.initConfig({
+    // compile scss files
     sass: {
       dist: {
         options: {
@@ -15,15 +18,17 @@ module.exports = function(grunt) {
         }]
       }
     },
+    // inline external scripts
     inline: {
       dist: {
         options: {
           uglify: true
         },
-        src: [ 'src/index.html' ],
-        dest: [ './']
+        src: ['src/index.html'],
+        dest: ['./']
       }
     },
+    // minimise HTML
     htmlmin: {
       dist: {
         options: {
@@ -35,15 +40,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    // watch for changes (for dev)
     watch: {
       scripts: {
         files: ['src/sass/**/*.scss', 'src/index.html', 'src/js/**/*.js'],
-        tasks: ['sass', 'inline', 'htmlmin'],
+        tasks: defaultTasks,
         options: {
           debounceDelay: 250,
-        },
-      },
-    },
+        }
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-inline');
@@ -52,5 +58,5 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['sass', 'inline', 'htmlmin']);
+  grunt.registerTask('default', defaultTasks);
 };
