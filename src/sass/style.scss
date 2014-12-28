@@ -90,16 +90,9 @@
 	}
 /* Wrapper */
 
-	@include vendor-keyframes('wrapper') {
-		0%		{ opacity: 0; }
-		100%	{ opacity: 1; }
-	}
-
 	#wrapper {
-		@include vendor-property('animation', 'wrapper #{$duration-wrapper} forwards');
 		height: 100%;
 		left: 0;
-		opacity: 0;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -108,8 +101,6 @@
 /* BG */
 
 	#bg {
-		@include vendor-property('backface-visibility', 'hidden');
-		@include vendor-property('transform', 'translate3d(0,0,0)');
 
 		/* Set your background with this */
 		background: $bg;
@@ -146,26 +137,11 @@
 	
 /* Header */
 
-	@include vendor-keyframes('header') {
-		0%		{ @include vendor-property('transform', 'translate3d(0,1em,0)'); opacity: 0; }
-		100%	{ @include vendor-property('transform', 'translate3d(0,0,0)'); opacity: 1; }
-	}
-
-	@include vendor-keyframes('nav-icons') {
-		0%		{ @include vendor-property('transform', 'translate3d(0,1em,0)'); opacity: 0; }
-		100%	{ @include vendor-property('transform', 'translate3d(0,0,0)'); opacity: 1; }
-	}
-	
 	#header {
-		@include vendor-property('animation', 'header #{$duration-header} #{$delay-header} forwards');
-		@include vendor-property('backface-visibility', 'hidden');
-		@include vendor-property('transform', 'translate3d(0,0,0)');
 		cursor: default;
 		display: inline-block;
-		opacity: 0;
 		position: relative;
 		text-align: center;
-		top: -1em;
 		vertical-align: middle;
 		width: 90%;
 		
@@ -185,22 +161,12 @@
 			margin: 1.5em 0 0 0;
 
 			li {
-				@include vendor-property('animation', 'nav-icons #{$duration-nav-icons} ease-in-out forwards');
-				@include vendor-property('backface-visibility', 'hidden');
-				@include vendor-property('transform', 'translate3d(0,0,0)');
 				display: inline-block;
 				height: $size-nav-icon-wrapper;
 				line-height: $size-nav-icon-wrapper * 1.1;
-				opacity: 0;
 				position: relative;
 				top: 0;
 				width: $size-nav-icon-wrapper;
-
-				@for $x from 1 through 10 {
-					&:nth-child(#{$x}) {
-						@include vendor-property('animation-delay', $delay-nav-icons + ($x * $delay-nav-icon));
-					}
-				}
 			}
 			
 			a {
