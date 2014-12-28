@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     sass: {
       dist: {
@@ -25,10 +24,21 @@ module.exports = function(grunt) {
         dest: [ './']
       }
     },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'index.html': 'index.html'
+        }
+      }
+    },
     watch: {
       scripts: {
-        files: ['src/sass/**/*.scss', 'src/index.html'],
-        tasks: ['sass', 'inline'],
+        files: ['src/sass/**/*.scss', 'src/index.html', 'src/js/**/*.js'],
+        tasks: ['sass', 'inline', 'htmlmin'],
         options: {
           debounceDelay: 250,
         },
@@ -38,8 +48,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-inline');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['inline', 'sass']);
+  grunt.registerTask('default', ['sass', 'inline', 'htmlmin']);
 };

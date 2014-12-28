@@ -9,7 +9,7 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'global': { range: '*', href: 'css/style.css', viewport: { scalable: false } },
+			// 'global': { range: '*', href: 'css/style.css', viewport: { scalable: false } },
 			'wide': { range: '-1680', href: 'css/style-wide.css' },
 			'normal': { range: '-1280', href: 'css/style-normal.css' },
 			'mobile': { range: '-736', href: 'css/style-mobile.css' },

@@ -5,11 +5,24 @@
 */
 
 @charset 'UTF-8';
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
-@import url('font-awesome.min.css');
 
 @import 'vars';
 @import 'mixins';
+
+/* Source Sans Pro Font */
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(../fonts/SourceSansProLight.woff) format('woff');
+}
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(../fonts/SourceSansProBlack.woff) format('woff');
+}
 
 /* Basic */
 
@@ -166,7 +179,6 @@
 		p {
 			font-size: 1.25em;
 			margin: 0.75em 0 0.25em 0;
-			opacity: 0.75;
 		}
 		
 		nav {
