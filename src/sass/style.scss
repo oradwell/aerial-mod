@@ -144,6 +144,7 @@
 		text-align: center;
 		vertical-align: middle;
 		width: 90%;
+		z-index: 1;
 
 		h1 {
 			font-size: 4.35em;
@@ -231,4 +232,8 @@
 		position: absolute;
 		text-align: center;
 		width: 100%;
+
+		span {
+			opacity: 0.6;
+		}
 	}
