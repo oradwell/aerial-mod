@@ -42,5 +42,5 @@ grunt
 See it in action:
 [www.omer.london](http://www.omer.london)
 
-Source theme: [Aerial](http://html5up.net/uploads/demos/aerial/)
+Source template: [Aerial](http://html5up.net/uploads/demos/aerial/)
 by [HTML5 UP](http://html5up.net/)
