@@ -24,8 +24,8 @@ module.exports = function(grunt) {
         options: {
           uglify: true
         },
-        src: ['src/index.html'],
-        dest: ['./']
+        src: 'src/index.html',
+        dest: './index.html'
       }
     },
     // minimise HTML
