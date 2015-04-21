@@ -20,6 +20,10 @@ Modified version of HTML5 UP Aerial Template
 
 ## Installation
 
+### Make sure you have npm
+
+npm comes with Node.js. Go to [nodejs.org](https://www.nodejs.org) to download it.
+
 ### Install the dependencies
 
 ```
