@@ -23,8 +23,8 @@
 			window.onload = function() {
 				document.body.className = '';
 				var em_href = 'mail' + 'to:'
-					+ ['omer', ['omer', 'london'].join('.')].join('@');
-				document.getElementById('omer_email').href = em_href;
+					+ ['oliver', ['radwell', 'codes'].join('.')].join('@');
+				document.getElementById('oliver_email').href = em_href;
 			}
 
 		// Prevent scrolling on touch.
