@@ -1,6 +1,8 @@
 aerial-mod
 ==========
 
+[![Build](https://github.com/oradwell/aerial-mod/actions/workflows/javascript.yml/badge.svg)](https://github.com/oradwell/aerial-mod/actions/workflows/javascript.yml)
+
 Modified version of HTML5 UP Aerial Template
 
 ## Modifications
