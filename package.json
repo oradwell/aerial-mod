@@ -1,13 +1,13 @@
 {
   "name": "personalsite",
-  "version": "1.0",
+  "version": "1.1.0",
   "description": "Personal site for Oliver Radwell",
   "main": "Gruntfile.js",
   "dependencies": {
-    "grunt": "~0.4.5",
-    "grunt-inline": "~0.3.2",
-    "grunt-contrib-htmlmin": "~0.3.0",
-    "grunt-contrib-sass": "~0.8.1"
+    "grunt": "^1.4.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-inline": "^0.3.7"
   },
   "devDependencies": {
     "grunt-contrib-watch": "~0.6.1"
