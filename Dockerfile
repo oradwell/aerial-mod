@@ -17,6 +17,8 @@ FROM nginx:1.20-alpine
 
 WORKDIR /usr/share/nginx/html
 
+COPY config/nginx.conf /etc/nginx/conf.d/default.conf
+
 COPY --from=0 /build/css ./css
 COPY --from=0 /build/js ./js
 COPY --from=0 /build/fonts ./fonts
