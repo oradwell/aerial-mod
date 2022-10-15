@@ -10,7 +10,7 @@
     "grunt-inline": "^0.3.7"
   },
   "devDependencies": {
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
