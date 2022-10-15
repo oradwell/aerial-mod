@@ -1,4 +1,4 @@
-FROM node:12-buster
+FROM node:16.18.0
 
 RUN apt-get update \
     && apt-get --no-install-recommends  -y install ruby-full \
