@@ -2,6 +2,7 @@ FROM node:16.18.0
 
 RUN apt-get update \
     && apt-get --no-install-recommends  -y install ruby-full \
+    && gem install ffi -v 1.17.1 \
     && gem install sass \
     && apt-get clean
 
