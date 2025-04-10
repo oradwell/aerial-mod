@@ -1,4 +1,4 @@
-FROM node:16.18.0
+FROM node:20.19.0
 
 RUN apt-get update \
     && apt-get --no-install-recommends  -y install ruby-full \
@@ -13,7 +13,7 @@ RUN npm install \
     && npm install -g grunt-cli \
     && grunt
 
-FROM nginx:1.22-alpine
+FROM nginx:1.27.4-alpine
 
 WORKDIR /usr/share/nginx/html
 

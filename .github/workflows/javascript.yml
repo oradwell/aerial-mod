@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
 
 env:
   REGISTRY: ghcr.io
@@ -12,14 +12,14 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       packages: write
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Log in to the Container registry
-      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      uses: docker/login-action@v3
       with:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
@@ -38,9 +38,9 @@ jobs:
         then
           REF_NAME=pr-${PR_NUM}
         fi
-        echo "::set-output name=tag-name::${REF_NAME}-$(date +%Y)-${SECONDS_HEX}"
+        echo "tag-name=${REF_NAME}-$(date +%Y)-${SECONDS_HEX}" >> $GITHUB_OUTPUT
     - name: Build and push Docker image
-      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+      uses: docker/build-push-action@v6
       with:
         context: .
         push: true
