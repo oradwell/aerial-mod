@@ -1,8 +1,5 @@
 .sass-cache/
-css/
-!css/images/
-!css/skel.css
-!css/font-awesome.min.css
+dist/
 node_modules/
 index.html
 package-lock.json
