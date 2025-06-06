@@ -5,6 +5,9 @@ aerial-mod
 
 Modified version of HTML5 UP Aerial Template
 
+See it in action:
+[www.radwell.codes](http://www.radwell.codes)
+
 ## Modifications
 
 * Removed most of the animations
@@ -22,9 +25,10 @@ Modified version of HTML5 UP Aerial Template
 
 ## Installation
 
-### Make sure you have npm
+### Pre-requisites
 
-npm comes with Node.js. Go to [nodejs.org](https://nodejs.org) to download it.
+- [Node.js](https://nodejs.org/en/download)
+- [Sass](https://github.com/sass/dart-sass)
 
 ### Install the dependencies
 
@@ -32,21 +36,15 @@ npm comes with Node.js. Go to [nodejs.org](https://nodejs.org) to download it.
 npm install
 ```
 
-### Run grunt
-
-If `grunt-cli` is not already installed, install it:
-
-```
-npm install grunt-cli -g
-```
+### Build
 
 Run:
+
 ```
-grunt
+npm run build
 ```
 
-See it in action:
-[www.radwell.codes](http://www.radwell.codes)
+## Credits
 
 Source template: [Aerial](http://html5up.net/uploads/demos/aerial/)
 by [HTML5 UP](http://html5up.net/)
