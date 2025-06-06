@@ -4,12 +4,12 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@import 'vars';
-@import 'mixins';
+@use 'vars';
+@use 'mixins';
 
 /* BG */
 
-	@include bg($bg-width * 0.275);
+	@include vars.bg(vars.$bg-width * 0.275);
 	
 /* Header */
 	

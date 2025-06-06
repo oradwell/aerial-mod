@@ -6,8 +6,8 @@
 
 @charset 'UTF-8';
 
-@import 'vars';
-@import 'mixins';
+@use 'vars';
+@use 'mixins';
 
 /* Source Sans Pro Font */
 
@@ -27,7 +27,7 @@
 /* Basic */
 
 	body, input, select, textarea {
-		color: $color-fg;
+		color: vars.$color-fg;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 15pt;
 		font-weight: 300 !important;
@@ -36,18 +36,18 @@
 	}
 
 	body {
-		background: $color-bg;
+		background: vars.$color-bg;
 		overflow: hidden;
 
 		&.loading{
 			* {
-				@include vendor-property('animation', 'none !important');
+				@include mixins.vendor-property('animation', 'none !important');
 			}
 		}
 	}
 
 	a {
-		@include vendor-property('transition', 'border-color 0.2s ease-in-out');
+		@include mixins.vendor-property('transition', 'border-color 0.2s ease-in-out');
 		border-bottom: dotted 1px;
 		color: inherit;
 		outline: 0;
@@ -61,7 +61,7 @@
 /* Icon */
 
 	.icon {
-		@include icon;
+		@include mixins.icon;
 		position: relative;
 
 		> .label {
@@ -103,7 +103,7 @@
 	#bg {
 
 		/* Set your background with this */
-		background: $bg;
+		background: vars.$bg;
 
 		background-repeat: repeat-x;
 		height: 100%;
@@ -113,7 +113,7 @@
 		top: 0;
 	}
 
-	@include bg($bg-width * 1.5);
+	@include vars.bg(vars.$bg-width * 1.5);
 
 /* Main */
 
@@ -167,11 +167,11 @@
 
 			li {
 				display: inline-block;
-				height: $size-nav-icon-wrapper;
-				line-height: $size-nav-icon-wrapper * 1.1;
+				height: vars.$size-nav-icon-wrapper;
+				line-height: vars.$size-nav-icon-wrapper * 1.1;
 				position: relative;
 				top: 0;
-				width: $size-nav-icon-wrapper;
+				width: vars.$size-nav-icon-wrapper;
 			}
 
 			a {
@@ -181,11 +181,11 @@
 				display: inline-block;
 
 				&:before {
-					@include vendor-property('transition', 'all 0.2s ease-in-out');
+					@include mixins.vendor-property('transition', 'all 0.2s ease-in-out');
 					border-radius: 100%;
-					border: solid 1px $color-fg;
+					border: solid 1px vars.$color-fg;
 					display: block;
-					font-size: $size-nav-icon;
+					font-size: vars.$size-nav-icon;
 					height: 2.5em;
 					line-height: 2.5em;
 					position: relative;
@@ -198,8 +198,8 @@
 					font-size: 1.1em;
 
 					&:before {
-						background-color: $color-nav-icon-hover-bg;
-						color: $color-nav-icon-hover-fg;
+						background-color: vars.$color-nav-icon-hover-bg;
+						color: vars.$color-nav-icon-hover-fg;
 					}
 				}
 
@@ -208,8 +208,8 @@
 					background: none;
 
 					&:before {
-						background-color: $color-nav-icon-active-bg;
-						color: $color-nav-icon-active-fg;
+						background-color: vars.$color-nav-icon-active-bg;
+						color: vars.$color-nav-icon-active-fg;
 					}
 				}
 
@@ -223,7 +223,7 @@
 /* Footer */
 
 	#footer {
-		@include vendor-value('background-image', 'linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%)');
+		@include mixins.vendor-value('background-image', 'linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%)');
 		bottom: 0;
 		cursor: default;
 		height: 6em;
