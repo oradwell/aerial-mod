@@ -10,19 +10,21 @@ RUN curl -sSLodart-sass-linux-x64.tar.gz \
 
 WORKDIR /build
 
-COPY . ./
+COPY package.json .
 
-RUN npm install \
-    && npm run build
+RUN npm install
+
+COPY src/ ./src
+COPY webpack.config.js ./
+
+RUN npm run build
 
 FROM nginx:1.27.4-alpine
 
 WORKDIR /usr/share/nginx/html
 
 COPY config/nginx.conf /etc/nginx/conf.d/default.conf
-
 COPY favicon.ico ./
-
 COPY --from=0 /build/dist ./
 
 EXPOSE 80
