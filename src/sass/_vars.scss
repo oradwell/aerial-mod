@@ -1,3 +1,5 @@
+@use "mixins";
+
 //
 //	Aerial by HTML5 UP
 //	html5up.net | @n33co
@@ -18,9 +20,9 @@ $size-nav-icon-wrapper:		5.35em;
 $size-nav-icon:				1.75em;
 
 @mixin bg($width) {
-	@include vendor-keyframes('bg') {
-		0%		{ @include vendor-property('transform', 'translate3d(0,0,0)'); }
-		100%	{ @include vendor-property('transform', 'translate3d(#{$width * -1},0,0)'); }
+	@include mixins.vendor-keyframes('bg') {
+		0%		{ @include mixins.vendor-property('transform', 'translate3d(0,0,0)'); }
+		100%	{ @include mixins.vendor-property('transform', 'translate3d(#{$width * -1},0,0)'); }
 	}
 
 	#bg {
