@@ -19,7 +19,7 @@ COPY webpack.config.js ./
 
 RUN npm run build
 
-FROM nginx:1.27.4-alpine
+FROM nginx:1.30.8-alpine
 
 WORKDIR /usr/share/nginx/html
 
